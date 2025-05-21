@@ -7,24 +7,36 @@
     <title>hey missy you so fine you so fine you blow my mind hey missy hey missy</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
-            background-image: url('./flyingunipigs.jpg'); /* Replace with your image URL */
-            background-size: cover; /* Ensures the image covers the entire background */
-            background-position: center; /* Centers the image */
+            overflow: hidden; /* Prevents scrollbars from appearing */
+            background-color: #000000; /* Set body background to black */
+        }
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1; /* Places the video behind other content */
+            transform: translate(-50%, -50%); /* Centers the video */
         }
         h1 {
+            position: relative; /* Allows z-index to work */
             font-size: 100px;
             background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-align: center; /* Centers the text */
         }
     </style>
 </head>
 <body>
+    <video autoplay muted loop>
+        <source src="./heymissyyousofine.mp4" type="video/mp4"> <!-- Replace with your video URL -->
+        Your browser does not support the video tag.
+    </video>
     <h1>Hello</h1>
 </body>
 </html>
